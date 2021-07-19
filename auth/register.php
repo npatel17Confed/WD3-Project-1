@@ -4,6 +4,7 @@
     if ($_POST) {
         echo 'has been submitted';
     }
+    
 ?>
 
 <!DOCTYPE html>

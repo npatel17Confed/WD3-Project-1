@@ -25,7 +25,7 @@ const registrationSubmit = (e) => {
         || password.includes('_' || '@' || '!')) {
         result = false;
         errors.push('Password should be at least 8 characters long and must contain lowercase letter, uppercase letter, number and special character (@, _ or !).');
-    } else if (password.length !== document.getElementById('confirm-password').value.trim()) {
+    } else if (document.getElementById('password').value.trim() !== document.getElementById('confirm-password').value.trim()) {
         result = false;
         errors.push('Passwords do not match.');
     }
