@@ -1,0 +1,3 @@
+<footer>
+    <!-- Other info -->
+</footer>
