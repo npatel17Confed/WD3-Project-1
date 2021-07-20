@@ -49,6 +49,12 @@ const registrationSubmit = () => {
   console.log("errr", errors);
 
   // file validation needs to be done
+  const image = document.getElementById("fileToUpload").value.split('.');
+  if (image[image.length - 1] !== "png" || image[image.length - 1] !== "jpg") {
+    result = false;
+    errors.push("Image must be a jpg or png file.");
+  }
+
   if (errors.length !== 0) {
     document.getElementById("error-block").style.display = "block";
     document.getElementById("error-msg").innerHTML += errors.join("<br>");

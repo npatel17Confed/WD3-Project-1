@@ -1,15 +1,24 @@
 <?php include '../partials/db_conn.php'; ?>
 
 <?php
-    if ($_POST) {
-        $query =  "INSERT INTO users (fullName, email, password, address, image) VALUES ('".$_POST["fullName"]."', '".$_POST["email"]."', '".md5($_POST["password"])."', '".$_POST["address"]."', 'sample_profile.png')";
+
+if ($_POST) {
+    $image = $_FILES['image']['name']; #will get name of the file which the user uploads
+    $tmp_image = $_FILES['image']['tmp_name'];
+    $imageSize = $_FILES['image']['size'];
+    $imageExt = explode('.', $image);
+    $image = $_POST['email'] . '.' . $imageExt[count($imageExt) - 1];
+    if (move_uploaded_file($tmp_image, "../images/$image")) {
+        $query =  "INSERT INTO users (fullName, email, password, address, image) VALUES ('" . $_POST["fullName"] . "', '" . $_POST["email"] . "', '" . md5($_POST["password"]) . "', '" . $_POST["address"] . "', '$image');";
         if (mysqli_query($con, $query)) {
             echo 'registration successful';
-        }
-        else {
+        } else {
             echo "Error: " . $query . "<br>" . mysqli_error($con);
-          }
+        }
     }
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +33,7 @@
         <div id="error-block" style="display: none;">
             <div class="alert alert-danger" id="error-msg"></div>
         </div>
-        <form method="POST" onsubmit="return registrationSubmit()">
+        <form method="POST" onsubmit="return registrationSubmit()" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="email">Email address</label>
                 <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
@@ -42,7 +51,7 @@
             <br>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password"  name="password" class="form-control" id="password" placeholder="Password">
+                <input type="password" name="password" class="form-control" id="password" placeholder="Password">
             </div>
             <br>
             <div class="form-group">
@@ -52,7 +61,7 @@
             <br>
             <div class="form-group">
                 Upload Image
-                <input type="file" name="profile" id="fileToUpload">
+                <input type="file" name="image" id="fileToUpload">
             </div>
             <br>
             <button type="submit" class="btn btn-primary">Submit</button>
