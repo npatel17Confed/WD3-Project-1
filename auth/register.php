@@ -2,9 +2,14 @@
 
 <?php
     if ($_POST) {
-        echo 'has been submitted';
+        $query =  "INSERT INTO users (fullName, email, password, address, image) VALUES ('".$_POST["fullName"]."', '".$_POST["email"]."', '".md5($_POST["password"])."', '".$_POST["address"]."', 'sample_profile.png')";
+        if (mysqli_query($con, $query)) {
+            echo 'registration successfullllllllllllllll';
+        }
+        else {
+            echo "Error: " . $query . "<br>" . mysqli_error($con);
+          }
     }
-    
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +24,7 @@
         <div id="error-block" style="display: none;">
             <div class="alert alert-danger" id="error-msg"></div>
         </div>
-        <form method="POST" onsubmit="registrationSubmit(event)">
+        <form method="POST" onsubmit="return registrationSubmit()">
             <div class="form-group">
                 <label for="email">Email address</label>
                 <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
