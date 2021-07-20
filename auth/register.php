@@ -4,7 +4,7 @@
     if ($_POST) {
         $query =  "INSERT INTO users (fullName, email, password, address, image) VALUES ('".$_POST["fullName"]."', '".$_POST["email"]."', '".md5($_POST["password"])."', '".$_POST["address"]."', 'sample_profile.png')";
         if (mysqli_query($con, $query)) {
-            echo 'registration successfullllllllllllllll';
+            echo 'registration successful';
         }
         else {
             echo "Error: " . $query . "<br>" . mysqli_error($con);

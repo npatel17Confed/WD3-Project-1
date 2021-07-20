@@ -1,5 +1,5 @@
-const registrationSubmit = (e) => {
-  e.preventDefault();
+const registrationSubmit = () => {
+
   const email = document.getElementById("email").value.trim();
   const fullName = document.getElementById("full-name").value.trim();
   const password = document.getElementById("password").value.trim();
