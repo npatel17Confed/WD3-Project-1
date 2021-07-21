@@ -46,11 +46,10 @@ const registrationSubmit = () => {
     errors.push("Passwords do not match.");
   }
 
-  console.log("errr", errors);
-
   // file validation needs to be done
   const image = document.getElementById("fileToUpload").value.split('.');
-  if (image[image.length - 1] !== "png" || image[image.length - 1] !== "jpg") {
+  console.log('image name >> ', image);
+  if (document.getElementById("fileToUpload").value !== "" && image[image.length - 1] !== "png" && image[image.length - 1] !== "jpg") {
     result = false;
     errors.push("Image must be a jpg or png file.");
   }

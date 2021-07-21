@@ -4,14 +4,28 @@
 
 if ($_POST) {
     $image = $_FILES['image']['name']; #will get name of the file which the user uploads
-    $tmp_image = $_FILES['image']['tmp_name'];
-    $imageSize = $_FILES['image']['size'];
-    $imageExt = explode('.', $image);
-    $image = $_POST['email'] . '.' . $imageExt[count($imageExt) - 1];
-    if (move_uploaded_file($tmp_image, "../images/$image")) {
+    if ($image != "") {
+        $tmp_image = $_FILES['image']['tmp_name'];
+        $imageSize = $_FILES['image']['size'];
+        $imageExt = explode('.', $image);
+        $image = $_POST['email'] . '.' . $imageExt[count($imageExt) - 1];
+        if (move_uploaded_file($tmp_image, "../images/$image")) {
+            $query =  "INSERT INTO users (fullName, email, password, address, image) VALUES ('" . $_POST["fullName"] . "', '" . $_POST["email"] . "', '" . md5($_POST["password"]) . "', '" . $_POST["address"] . "', '$image');";
+            if (mysqli_query($con, $query)) {
+                session_start();
+                $_SESSION["id"] = $row['id'];
+                header("location: ../index.php");
+            } else {
+                echo "Error: " . $query . "<br>" . mysqli_error($con);
+            }
+        }
+    } else {
+        $image = 'sample_profile.png';
         $query =  "INSERT INTO users (fullName, email, password, address, image) VALUES ('" . $_POST["fullName"] . "', '" . $_POST["email"] . "', '" . md5($_POST["password"]) . "', '" . $_POST["address"] . "', '$image');";
         if (mysqli_query($con, $query)) {
-            echo 'registration successful';
+            session_start();
+            $_SESSION["id"] = $row['id'];
+            header("location: ../index.php");
         } else {
             echo "Error: " . $query . "<br>" . mysqli_error($con);
         }
