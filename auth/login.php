@@ -10,9 +10,9 @@ if ($_POST) {
     if (isset($row)) {
         session_start();
         $_SESSION["id"] = $row['id'];
-        header("location: ../index.php");
+        header("location: ../main/index.php");
     } else {
-        echo $result;
+        echo "Incorrect Credentials.";
     }
 }
 ?>
@@ -45,7 +45,9 @@ if ($_POST) {
             <br>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        <br>
         <p>Don't have an account? <a href="./register.php">Register</a></p>
+        <p>Forgot your password? <a href="./forgot_password.php">Reset</a></p>
     </div>
 
     <script src="../assets/main.js" type="text/javascript"></script>

@@ -14,7 +14,7 @@ if ($_POST) {
             if (mysqli_query($con, $query)) {
                 session_start();
                 $_SESSION["id"] = $row['id'];
-                header("location: ../index.php");
+                header("location: ../main/index.php");
             } else {
                 echo "Error: " . $query . "<br>" . mysqli_error($con);
             }
@@ -25,7 +25,7 @@ if ($_POST) {
         if (mysqli_query($con, $query)) {
             session_start();
             $_SESSION["id"] = $row['id'];
-            header("location: ../index.php");
+            header("location: ../main/index.php");
         } else {
             echo "Error: " . $query . "<br>" . mysqli_error($con);
         }
