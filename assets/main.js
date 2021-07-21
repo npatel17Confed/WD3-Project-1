@@ -63,18 +63,20 @@ const registrationSubmit = () => {
   return result;
 };
 
-const loginSubmit = (e) => {
-  e.preventDefault();
+const loginSubmit = () => {
+
   let result = true;
 
   // emptying previous errors
   document.getElementById("error-msg").innerHTML = "";
+  document.getElementById("error-block").style.display = "none";
 
   if (
     document.getElementById("email").value.trim() === "" ||
     document.getElementById("password").value.trim() === ""
   ) {
     result = false;
+    alert(result);
     document.getElementById("error-block").style.display = "block";
     document.getElementById("error-msg").innerHTML += "Fields are empty.";
   }
