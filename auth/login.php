@@ -1,6 +1,6 @@
 <?php
 include '../partials/db_conn.php';
-//session_start();
+
 if ($_POST) {
     $email = $_POST['email'];
     $sql = "SELECT * FROM users where email = '" . $_POST['email'] . "' and password = '" . md5($_POST['password']) . "' LIMIT 1;";
@@ -22,6 +22,8 @@ if ($_POST) {
 <html lang="en">
 
 <?php include '../partials/metadata.php'; ?>
+
+<?php include '../partials/navbar.php'; ?>
 
 <body>
     <div class="container">

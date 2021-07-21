@@ -31,14 +31,14 @@ if ($_POST) {
         }
     }
 }
-
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <?php include '../partials/metadata.php'; ?>
+
+<?php include '../partials/navbar.php'; ?>
 
 <body>
     <div class="container">
