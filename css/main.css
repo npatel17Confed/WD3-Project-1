@@ -115,8 +115,16 @@
     padding-bottom: 70px;
   } */
 footer {
+	position: fixed;
+	bottom: 0;
+	right:0;
+	left:0;
 	background-color: black;
 	padding: 25px;
+  }
+
+  .container {
+	  margin-bottom: 100px;
   }
 @media only screen and (min-width: 480px) and (max-width: 640px) {
 

@@ -11,8 +11,6 @@
 
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-<link rel="stylesheet" type="text/css" href="../css/main.css" />
-
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
