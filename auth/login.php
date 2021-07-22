@@ -1,6 +1,10 @@
 <?php
 include '../partials/db_conn.php';
 
+if (isset($_SESSION['id'])) {
+    header('location: ../main/index.php');
+}
+
 if ($_POST) {
     $email = $_POST['email'];
     $sql = "SELECT * FROM users where email = '" . $_POST['email'] . "' and password = '" . md5($_POST['password']) . "' LIMIT 1;";
@@ -10,6 +14,7 @@ if ($_POST) {
     if (isset($row)) {
         session_start();
         $_SESSION["id"] = $row['id'];
+        $_SESSION["image"] = $row["image"];
         header("location: ../main/index.php");
     } else {
         echo "Incorrect Credentials.";
@@ -49,8 +54,6 @@ if ($_POST) {
         <p>Don't have an account? <a href="./register.php">Register</a></p>
         <p>Forgot your password? <a href="./forgot_password.php">Reset</a></p>
     </div>
-
-    <script src="../assets/main.js" type="text/javascript"></script>
 </body>
-
+<?php include '../partials/footer.php'; ?>
 </html>

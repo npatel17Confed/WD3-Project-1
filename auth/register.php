@@ -2,6 +2,10 @@
 
 <?php
 
+if (isset($_SESSION['id'])) {
+    header('location: ../main/index.php');
+}
+
 if ($_POST) {
     $image = $_FILES['image']['name']; #will get name of the file which the user uploads
     if ($image != "") {
@@ -12,7 +16,6 @@ if ($_POST) {
         if (move_uploaded_file($tmp_image, "../images/$image")) {
             $query =  "INSERT INTO users (fullName, email, password, address, image) VALUES ('" . $_POST["fullName"] . "', '" . $_POST["email"] . "', '" . md5($_POST["password"]) . "', '" . $_POST["address"] . "', '$image');";
             if (mysqli_query($con, $query)) {
-                session_start();
                 $_SESSION["id"] = $row['id'];
                 header("location: ../main/index.php");
             } else {
@@ -23,7 +26,6 @@ if ($_POST) {
         $image = 'sample_profile.png';
         $query =  "INSERT INTO users (fullName, email, password, address, image) VALUES ('" . $_POST["fullName"] . "', '" . $_POST["email"] . "', '" . md5($_POST["password"]) . "', '" . $_POST["address"] . "', '$image');";
         if (mysqli_query($con, $query)) {
-            session_start();
             $_SESSION["id"] = $row['id'];
             header("location: ../main/index.php");
         } else {
@@ -82,8 +84,6 @@ if ($_POST) {
         </form>
         <p>Already have an account? <a href="./login.php">Login</a></p>
     </div>
-
-    <script src="../assets/main.js" type="text/javascript"></script>
 </body>
-
+<?php include '../partials/footer.php'; ?>
 </html>

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <img class="navbar-brand" src="../images/logo.PNG" alt='Comber Drug Store' height='60' />
+        <a href="../main/index.php"><img class="navbar-brand" src="../images/logo.PNG" alt='Comber Drug Store' height='60' /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -15,15 +15,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Shop</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Categories
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">#1</a>
-                            <a class="dropdown-item" href="#">#2</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">#3</a>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Categories
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">#2</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">#3</a>
+                            </div>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -33,7 +34,16 @@
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0 mr-2" type="submit">Search</button>
-                    <a href='../auth/logout.php' class="btn btn-outline-danger my-2 my-sm-0">Logout</a>
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="../images/<?php echo $_SESSION["image"] ?>" alt="profile picture" style="width: 40px; height: 40px; border-radius: 100%;">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown1">
+                            <a class="dropdown-item" href="#">My Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="../auth/logout.php">Logout</a>
+                        </div>
+                    </div>
                 </form>
             <?php else : ?>
                 <ul class="navbar-nav ml-auto">
