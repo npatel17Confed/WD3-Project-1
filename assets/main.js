@@ -81,3 +81,10 @@ const loginSubmit = () => {
   }
   return result;
 };
+
+const change = () => // no ';' here
+{
+  var elem = document.getElementById("myButton1");
+  if (elem.value == "Buy") elem.value = "Sold";
+  else elem.value = "Buy";
+}

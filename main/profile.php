@@ -72,6 +72,9 @@ $row = mysqli_fetch_array($result);
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <a href='./updateProfile.php'>Update Profile</a>
+            </div>
         </div>
     </div>
 </body>

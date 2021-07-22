@@ -9,107 +9,37 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
-            <div class="ibox">
-                <div class="ibox-content product-box">
-                    <div class="product-imitation">
-                        [ INFO ]
-                    </div>
-                    <div class="product-desc">
-                        <span class="product-price">
-                            $10
-                        </span>
-                        <small class="text-muted">Category</small>
-                        <a href="#" class="product-name"> Product</a>
+        <?php
 
-                        <div class="small m-t-xs">
-                            Many desktop publishing packages and web page editors now.
+        $default = true;
+        $result = mysqli_query($con, "SELECT * FROM products");
+
+        while ($row = mysqli_fetch_array($result)) {
+            echo '<div class="col-md-3">
+                <div class="ibox">
+                    <div class="ibox-content product-box">
+                        <div class="product-imitation"> 
+                                <img src="../images/products/'.$row['image'].'" alt='. $row['image'] .' />
                         </div>
-                        <div class="m-t text-righ">
+                        <div class="product-desc">
+                            <span class="product-price">$'. $row['price'] .'</span>
+                            <small class="text-muted">Category</small>
+                            <a href="#" class="product-name"> '. $row['title'] .'</a>
 
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="ibox">
-                <div class="ibox-content product-box">
+                            <div class="small m-t-xs">'. $row['description'] .'</div>
+                            <div class="m-t text-righ">
 
-                    <div class="product-imitation">
-                        [ INFO ]
-                    </div>
-                    <div class="product-desc">
-                        <span class="product-price">
-                            $10
-                        </span>
-                        <small class="text-muted">Category</small>
-                        <a href="#" class="product-name"> Product</a>
-
-
-
-                        <div class="small m-t-xs">
-                            Many desktop publishing packages and web page editors now.
-                        </div>
-                        <div class="m-t text-righ">
-
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
+                                <a href="#" class="btn btn-xs btn-outline btn-primary">
+                                buy
+                                <i class="fa fa-long-arrow-right"></i> </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="ibox">
-                <div class="ibox-content product-box active">
+            </div>'; //these are the fields that you have stored in your database table employee
 
-                    <div class="product-imitation">
-                        [ INFO ]
-                    </div>
-                    <div class="product-desc">
-                        <span class="product-price">
-                            $10
-                        </span>
-                        <small class="text-muted">Category</small>
-                        <a href="#" class="product-name"> Product</a>
-
-
-
-                        <div class="small m-t-xs">
-                            Many desktop publishing packages and web page editors now.
-                        </div>
-                        <div class="m-t text-righ">
-
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="ibox">
-                <div class="ibox-content product-box">
-
-                    <div class="product-imitation">
-                        [ INFO ]
-                    </div>
-                    <div class="product-desc">
-                        <span class="product-price">
-                            $10
-                        </span>
-                        <small class="text-muted">Category</small>
-                        <a href="#" class="product-name"> Product</a>
-                        <div class="small m-t-xs">
-                            Many desktop publishing packages and web page editors now.
-                        </div>
-                        <div class="m-t text-righ">
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        }
+        ?>
     </div>
 </div>
 
