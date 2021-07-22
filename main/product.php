@@ -11,7 +11,6 @@
     <div class="row">
         <?php
 
-        $default = true;
         $result = mysqli_query($con, "SELECT * FROM products");
 
         while ($row = mysqli_fetch_array($result)) {

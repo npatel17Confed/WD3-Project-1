@@ -52,7 +52,7 @@ if ($_POST) {
         <form method="POST" onsubmit="return registrationSubmit()" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="email">Email address</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+                <input type="text" name="email" class="form-control" id="email" placeholder="Enter email">
             </div>
             <br>
             <div class="form-group">
