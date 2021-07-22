@@ -18,49 +18,47 @@ $row = mysqli_fetch_array($result);
     <div class="container">
         <div class="main-body">
             <div class="row">
-                <div class="col-md-4 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex flex-column align-items-center text-center">
-                                <img src="<?php echo '../images/products/' . $row['image'] ?>" alt="Admin" class="rounded-circle" width="100" height="100">
-                                <div class="mt-3">
-                                    <h4><?php echo $row['title'] ?></h4>
-                                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="<?php echo '../images/products/' . $row['image'] ?>" alt="Admin" class="rounded-circle" width="100" height="100">
+                            <div class="mt-3">
+                                <h4><?php echo $row['title'] ?></h4>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Title</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <?php echo $row['title'] ?>
-                                </div>
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Title</h6>
                             </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Description</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <?php echo $row['description'] ?>
-                                </div>
+                            <div class="col-sm-9 text-secondary">
+                                <?php echo $row['title'] ?>
                             </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Price</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    <?php echo '$ '.$row['price'] ?>
-                                </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Description</h6>
                             </div>
-                            
-                            <!-- <div class="row">
+                            <div class="col-sm-9 text-secondary">
+                                <?php echo $row['description'] ?>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Price</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <?php echo '$ ' . $row['price'] ?>
+                            </div>
+                        </div>
+
+                        <!-- <div class="row">
                                 <div class="col-sm-3">
                                     <h6 class="mb-0">Profile Created At</h6>
                                 </div>
@@ -68,11 +66,11 @@ $row = mysqli_fetch_array($result);
                             
                                 </div>
                             </div> -->
-                        </div>
                     </div>
+
                 </div>
             </div>
-           
+
         </div>
     </div>
 </body>
