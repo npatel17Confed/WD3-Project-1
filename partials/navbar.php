@@ -39,7 +39,7 @@
                             <img src="../images/<?php echo $_SESSION["image"] ?>" alt="profile picture" style="width: 40px; height: 40px; border-radius: 100%;">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown1">
-                            <a class="dropdown-item" href="#">My Profile</a>
+                            <a class="dropdown-item" href="../main/profile.php">My Profile</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="../auth/logout.php">Logout</a>
                         </div>
