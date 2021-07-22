@@ -2,6 +2,12 @@
 include '../partials/db_conn.php';
 $error = "";
 
+session_start();
+
+if (isset($_SESSION['id'])) {
+    header('location: ../main/index.php');
+}
+
 if (isset($_GET["email"]) && isset($_GET["code"])) {
     $email = $_GET['email'];
     $password = $_GET['code'];
@@ -66,7 +72,6 @@ if(isset($_POST['submit'])){
         </form>
 
     </div>
-
-    <script src="../assets/main.js" type="text/javascript"></script>
 </body>
+<?php include '../partials/footer.php'; ?>
 </html>

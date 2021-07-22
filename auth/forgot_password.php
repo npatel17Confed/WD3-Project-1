@@ -22,7 +22,6 @@
         </form>
 
     </div>
-
-    <script src="../assets/main.js" type="text/javascript"></script>
 </body>
+<?php include '../partials/footer.php'; ?>
 </html>
