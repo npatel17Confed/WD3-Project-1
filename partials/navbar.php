@@ -31,9 +31,10 @@
                         <a class="nav-link disabled" href="#">Disabled</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <form action="../main/search.php" method="GET" class="form-inline my-2 my-lg-0">
+                    <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0 mr-2" type="submit">Search</button>
+                    </form>
                     <div class="dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="../images/<?php echo $_SESSION["image"] ?>" alt="profile picture" style="width: 40px; height: 40px; border-radius: 100%;">
@@ -44,7 +45,7 @@
                             <a class="dropdown-item" href="../auth/logout.php">Logout</a>
                         </div>
                     </div>
-                </form>
+                
             <?php else : ?>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
