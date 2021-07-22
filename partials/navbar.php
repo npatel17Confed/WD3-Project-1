@@ -10,7 +10,7 @@
             <?php if (isset($_SESSION) && isset($_SESSION["id"])) : ?>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="./../main/index.php">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="../main/index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../main/product.php">Products</a>

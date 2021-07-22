@@ -115,7 +115,7 @@
     padding-bottom: 70px;
   } */
 footer {
-	background-color:#1abc9c;
+	background-color: black;
 	padding: 25px;
   }
 @media only screen and (min-width: 480px) and (max-width: 640px) {
