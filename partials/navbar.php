@@ -15,20 +15,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../main/product.php">Products</a>
                     </li>
+                    
                     <li class="nav-item">
-                        <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Categories
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">#2</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">#3</a>
-                            </div>
-                        </div>
+                        <a class="nav-link" href="../main/arriving.php">Arriving Soon</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link" href="../main/Aboutus.php">About us</a>
                     </li>
                 </ul>
                 <form action="../main/search.php" method="GET" class="form-inline my-2 my-lg-0">

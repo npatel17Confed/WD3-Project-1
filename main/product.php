@@ -11,7 +11,6 @@
     <div class="row">
         <?php
 
-        $default = true;
         $result = mysqli_query($con, "SELECT * FROM products");
 
         while ($row = mysqli_fetch_array($result)) {
@@ -29,8 +28,8 @@
                             <div class="small m-t-xs">'. $row['description'] .'</div>
                             <div class="m-t text-righ">
 
-                                <a href="#" class="btn btn-xs btn-outline btn-primary">
-                                buy
+                                <a href="./information.php?id='.$row['id'].'" class="btn btn-xs btn-outline btn-primary">
+                                Info
                                 <i class="fa fa-long-arrow-right"></i> </a>
                             </div>
                         </div>
