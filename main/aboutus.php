@@ -96,10 +96,11 @@ html {
   <div class="column">
     <div class="card">
       <div class="container">
-        <h2>Nilkumar</h2>
+        <h2>Nilkumar Patel</h2>
+        <img src="../images/developers/nil.jpg" height='300' width='300' />
         <p class="title">CEO & Founder</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>jane@example.com</p>
+        <p>nsp4898@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
@@ -110,9 +111,10 @@ html {
 
       <div class="container">
         <h2>Rohan Palkar</h2>
+        <img src="../images/developers/rohan.jpg" height='300' width='300' />
         <p class="title"> Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
+        <p></p>
+        <p>rohanpalkar56@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
@@ -123,9 +125,10 @@ html {
 
       <div class="container">
         <h2>Chintan Trivedi</h2>
+        <img src="../images/developers/chintan.jpg" height='300' width='300' />
         <p class="title">Developer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>john@example.com</p>
+        <p>chintan024@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
@@ -138,9 +141,10 @@ html {
 
       <div class="container">
         <h2>Neel Patel</h2>
+        <img src="../images/developers/neel.jpg" height='300' width='300' />
         <p class="title"> Developer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
+        <p>neel.2147@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
@@ -152,9 +156,10 @@ html {
 
       <div class="container">
         <h2>Parth Vyas</h2>
+        <img src="../images/developers/parth.jpg" height='300' width='300' />
         <p class="title">Developer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>mike@example.com</p>
+        <p>vyasparth188@gmail.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>

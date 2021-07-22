@@ -58,14 +58,6 @@ $row = mysqli_fetch_array($result);
                             </div>
                         </div>
 
-                        <!-- <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Profile Created At</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                            
-                                </div>
-                            </div> -->
                     </div>
 
                 </div>
