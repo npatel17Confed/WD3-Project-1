@@ -44,11 +44,13 @@ if ($_POST) {
 
 <body>
     <div class="container">
+    <?php   echo '<div class="alert alert-success">login after registerd</div>' ?>
         <h2>Registration Form</h2>
         <br>
         <div id="error-block" style="display: none;">
             <div class="alert alert-danger" id="error-msg"></div>
         </div>
+
         <form method="POST" onsubmit="return registrationSubmit()" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="email">Email address</label>

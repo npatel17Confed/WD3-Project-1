@@ -8,7 +8,8 @@
 <?php include '../partials/navbar.php'; ?>
 
 <?php
-$query = "SELECT * FROM products WHERE id = " . $_GET['id'] . " LIMIT 1";
+$query = "SELECT * FROM ".$_GET['products']." WHERE id = " . $_GET['id'] . " LIMIT 1";
+  
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_array($result);
 ?>

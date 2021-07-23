@@ -13,18 +13,18 @@
                         <a class="nav-link" href="../main/index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../main/product.php">Products</a>
+                        <a class="nav-link" href="../main/product.php?products=products">Products</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="../main/arriving.php">Arriving Soon</a>
+                        <a class="nav-link" href="../main/product.php?products=arriving">Arriving Soon</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../main/Aboutus.php">About us</a>
                     </li>
                 </ul>
                 <form action="../main/search.php" method="GET" class="form-inline my-2 my-lg-0">
-                    <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search By Product" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0 mr-2" type="submit">Search</button>
                     </form>
                     <div class="dropdown">

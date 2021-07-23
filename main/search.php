@@ -48,5 +48,6 @@ if(isset($_GET['search'])){
 }
 ?> 
 
+<?php include '../partials/footer.php'; ?>
 
 <?php echo $output;?>
