@@ -16,7 +16,8 @@ if ($_POST) {
         if (move_uploaded_file($tmp_image, "../images/$image")) {
             $query =  "INSERT INTO users (fullName, email, password, address, image) VALUES ('" . $_POST["fullName"] . "', '" . $_POST["email"] . "', '" . md5($_POST["password"]) . "', '" . $_POST["address"] . "', '$image');";
             if (mysqli_query($con, $query)) {
-                $_SESSION["id"] = $row['id'];
+                $_SESSION['id'] = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE email = '".$_POST['email']."' LIMIT 1;"))['id'];
+                $_SESSION['image'] = $image;
                 header("location: ../main/index.php");
             } else {
                 echo "Error: " . $query . "<br>" . mysqli_error($con);
@@ -26,7 +27,8 @@ if ($_POST) {
         $image = 'sample_profile.png';
         $query =  "INSERT INTO users (fullName, email, password, address, image) VALUES ('" . $_POST["fullName"] . "', '" . $_POST["email"] . "', '" . md5($_POST["password"]) . "', '" . $_POST["address"] . "', '$image');";
         if (mysqli_query($con, $query)) {
-            $_SESSION["id"] = $row['id'];
+            $_SESSION['id'] = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE email = '".$_POST['email']."' LIMIT 1;"))['id'];
+            $_SESSION['image'] = 'sample_profile.png';
             header("location: ../main/index.php");
         } else {
             echo "Error: " . $query . "<br>" . mysqli_error($con);

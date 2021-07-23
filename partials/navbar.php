@@ -7,7 +7,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <?php session_start(); ?>
-            <?php if (isset($_SESSION) && isset($_SESSION["id"])) : ?>
+            <?php if (isset($_SESSION) && (isset($_SESSION["id"]) || isset($_SESSION['email']))) : ?>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="../main/index.php">Home <span class="sr-only">(current)</span></a>
